@@ -1,21 +1,29 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { NoPreloading, PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'feature-a',
+    loadChildren: () => import('./feature-a/feature-a.module').then( m => m.FeatureAPageModule)
+  },
+  {
+    path: 'feature-b',
+    loadChildren: () => import('./feature-b/feature-b.module').then( m => m.FeatureBModule)
+  },
+  {
+    path: 'root-page',
+    loadChildren: () => import('./root-page/root-page.module').then( m => m.RootPagePageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'root-page',
     pathMatch: 'full'
   },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: NoPreloading })
   ],
   exports: [RouterModule]
 })

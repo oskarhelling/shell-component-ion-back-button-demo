@@ -11,9 +11,9 @@ I am working with ionic web app and need to differentiate the navigation between
 4. Navigate from the list to the detail page inside Feature B. Notice the missing back button. (history has been cleared?) Notice that the browser's back button works correctly.
 
 # Isolating the cause
-In the router-modules of FeatureA and FeatureB, comment out the lines which reference/apply the shell component (where the the diffrenentiation between web-mobile vs web-desktop is done)
+In the router-modules of FeatureA and FeatureB, comment out the lines which reference/apply the shell component (where the the diffrenentiation between web-mobile vs web-desktop would be done.)
 
-The back button works as expected.abs
+The back button works as expected
 
 # Question
-Is this behavior by design? If so, then what would be the recommended approach to this problem?
+Is this behavior by design? If so, then what would be the recommended approach to solve this problem?

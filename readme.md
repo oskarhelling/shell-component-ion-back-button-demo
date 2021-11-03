@@ -7,8 +7,8 @@ I am working with ionic web app and need to differentiate the navigation between
 # Steps to verify
 1. Run the app.
 2. Navigate from root to Feature A. Notice that the back button is missing.
-2. Continue navigation to the list page. Notice back button appearing. (now there is something in the history to go back to)
-2. Navigate from the list to the detail page inside Feature B. Notice the missing back button. (history has been cleared?)
+3. Continue navigation to the list page. Notice back button appearing. (now there is something in the history to go back to)
+4. Navigate from the list to the detail page inside Feature B. Notice the missing back button. (history has been cleared?) Notice that the browser's back button works correctly.
 
 # Isolating the cause
 In the router-modules of FeatureA and FeatureB, comment out the lines which reference/apply the shell component (where the the diffrenentiation between web-mobile vs web-desktop is done)

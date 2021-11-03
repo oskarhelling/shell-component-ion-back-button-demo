@@ -1,0 +1,7 @@
+{
+  "name": "shell-component-ion-back-button-demo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
